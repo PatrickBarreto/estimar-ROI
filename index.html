@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #retorno{
+            display:flex;
+            display:-webkit-flex;
+            flex-flow:row-reverse;
+        }
+        table{
+            width: 50vw;
+            overflow: hidden;
+        }
+        table:first-of-type{
+            margin: 40px 0 0 0;
+        }
+        td{
+            background-color: white;
+            text-align:center;
+            width: 10vw;
+        }
+        th{
+            background-color: gray;
+        }
+        #limpar{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            Calcular retorno de produção com base em dados
+        </h2>
+
+        <div id="inputs">
+            <div>
+                <label> Custo por Aquisição 
+                <input type="number" id="cpa">
+            </div>
+            <div>
+                <label> Faturamento Bruto por Venda</label>
+                <input type="number" id="faturamento">
+            </div>
+            <div>
+                <label> Investimento a Realizar</label>
+                <input type="number" id="investimento">
+            </div>
+            
+            <button id="calcular">
+                calcular
+            </button>
+            <button id="limpar">
+                Limpar
+            </button>
+        </div>
+
+        <div id="retorno">
+    
+        </div>
+    
+    </div>
+    
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html> 
