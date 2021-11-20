@@ -32,10 +32,10 @@ function calcula_retorno(){
 			<th>Lucro líquido</th>
 		</tr>
 		<tr>
-			<td>${valor_pago}</td>
-			<td>${vendas}</td>
-			<td>${lucro_total}</td>
-			<td>${lucro_liquido}</td>
+			<td>${valor_pago.toFixed(2)}</td>
+			<td>${vendas.toFixed(2)}</td>
+			<td>${lucro_total.toFixed(2)}</td>
+			<td>${lucro_liquido.toFixed(2)}</td>
 		</tr>
 		<table>
 		`;
@@ -59,14 +59,22 @@ function resumo (lucro_total, investimento, vendas, lucro_liquido) {
 	
 	if (lucro_total >= investimento)
 	{
-		faturamento = ("Lucro Bruto: R$ " + lucro_total)
-		p.innerHTML = `Total de vendas: ${vendas} <br> ${faturamento} <br> Investimento: R$ ${investimento} <br> Lucro líquido de R$ ${lucro_liquido}`
+		p.innerHTML = `
+		Total de vendas: ${vendas.toFixed(2)} <br> 
+		Lucro bruto de: R$ ${lucro_total.toFixed(2)} <br> 
+		Investimento: R$ ${investimento.toFixed(2)} <br>
+		Lucro líquido de R$ ${lucro_liquido.toFixed(2)}
+		`
 		retorno.appendChild(p)
 	} 
 	if (lucro_total < investimento)
 	{
-		faturamento = ("Perda de lucro: R$" + lucro_total)
-		p.innerHTML = `Total de vendas: ${vendas} <br> ${faturamento}, Investimento: R$ ${investimento}, Perda total R$ ${lucro_liquido}`
+		p.innerHTML = `
+		Total de vendas: ${vendas.toFixed(2)} <br>
+		Lucro bruto de: R$${lucro_total.toFixed(2)} <br>
+		Investimento: R$ ${investimento.toFixed(2)} <br>
+		Perda total R$ ${lucro_liquido.toFixed(2)}
+		`
 		retorno.appendChild(p)
 	}
 
